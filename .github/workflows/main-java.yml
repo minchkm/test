@@ -1,0 +1,15 @@
+name: main-java.yml
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Main.java
+        run:   echo 'public class Main { public static void main(String[] args) { System.out.println("Hello, Java"); } }' 
+
+      
